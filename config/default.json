@@ -1,0 +1,4 @@
+{
+  "dbConnString": "sqlite::memory:",
+  "port": 3355
+}

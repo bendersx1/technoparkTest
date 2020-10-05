@@ -1,0 +1,26 @@
+{
+  "name": "technoparktest",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "technopark fabrica test",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bendersx1/technoparkTest.git"
+  },
+  "author": "Evgeniy Nosov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bendersx1/technoparkTest/issues"
+  },
+  "homepage": "https://github.com/bendersx1/technoparkTest#readme",
+  "dependencies": {
+    "config": "^3.3.2",
+    "express": "^4.17.1",
+    "sequelize": "^6.3.5",
+    "sqlite3": "^5.0.0"
+  }
+}
