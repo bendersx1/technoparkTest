@@ -12,6 +12,15 @@ const getAllProducts = (req, res) => {
     .catch(err => res.status(404).json({ message: "products not found" }));
 };
 
+const getProduct = (req, res) => {
+  const id = req.params.id;
+  return Product.findOne({ id, include: { model: Article } })
+    .then(products => {
+      res.json(products);
+    })
+    .catch(err => res.status(404).json({ message: "products not found" }));
+};
+
 const createProduct = (req, res) => {
   const product = req.body;
   return Product.create({
@@ -58,6 +67,15 @@ const getAllArticles = (req, res) => {
     .catch(err => res.status(404).json({ message: "articles not found" }));
 };
 
+const getArticle = (req, res) => {
+  const id = req.params.id;
+  return Article.findOne({ id, include: { model: Product } })
+    .then(articles => {
+      res.json(articles);
+    })
+    .catch(err => res.status(404).json({ message: "articles not found" }));
+};
+
 const createArticle = (req, res) => {
   return Article.create(req.body)
     .then(product => {
@@ -92,10 +110,12 @@ const deleteArticle = (req, res) => {
 
 export {
   getAllProducts,
+  getProduct,
   createProduct,
   updateProduct,
   deleteProduct,
   getAllArticles,
+  getArticle,
   createArticle,
   updateArticle,
   deleteArticle
