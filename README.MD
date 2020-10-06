@@ -28,12 +28,49 @@
 ## Endpoints
 
 **Получить все продукты**
+
 GET /products
 
 **Получить продукт по id**
+
 GET /products/:id
 
 **Создать продукт**
+
 POST /products
 
 body: _{"title": "title", "description": "description"}_
+
+**Обновить продукт**
+
+PATCH /products/:id
+
+body: _{"title": "title", "description": "description"}_
+
+**Удалить продукт**
+
+DELETE /products/:id
+
+**Получить все статьи**
+
+GET /articles
+
+**Получить статью по id**
+
+GET /articles/:id
+
+**Создать статью**
+
+POST /articles
+
+body: _{"name": "name", "text": "content", "productId": 1}_
+
+**Обновить статью**
+
+PATCH /articles/:id
+
+body: _{"name": "name", "text": "content"}_
+
+**Удалить статью**
+
+DELETE /articles/:id
