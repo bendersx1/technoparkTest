@@ -12,7 +12,8 @@ const article = (sequelize, DataTypes) => {
         allowNull: false
       },
       name: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
+        allowNull: false
       },
       text: {
         type: DataTypes.STRING

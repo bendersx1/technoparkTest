@@ -17,13 +17,9 @@ db.sequelize = sequelize;
 db.product = product(sequelize, Sequelize);
 db.article = article(sequelize, Sequelize);
 
-db.product.hasMany(
-  db.article
-  // { as: "article" }
-);
+db.product.hasMany(db.article);
 db.article.belongsTo(db.product, {
   foreignKey: "productId"
-  // as: "product"
 });
 
 export { db };
